@@ -1,0 +1,69 @@
+---
+import Hero from "@libs/ui/blocks/Hero/Hero";
+import GridSection from "@libs/ui/blocks/GridSection/GridSection";
+import Layout from "layouts/Layout.astro";
+import { WhatIDo } from "@libs/ui/blocks/WhatIDo/WhatIDo";
+import Contact from "@libs/ui/blocks/Contact/Contact";
+---
+
+<Layout
+    title="Aditya Kishore"
+    description="I'm a software engineer with a passion for building scalable and efficient systems. I'm currently working as a software engineer at Google."
+>
+    <main class="bg-background">
+        <Hero
+            name="Aditya Kishore"
+            biography="I'm a software engineer with a passion for building scalable and efficient systems. I'm currently working as a software engineer at Google."
+            skills={[
+                "React",
+                "Node.js",
+                "Typescript",
+                "Next.js",
+                "Tailwind CSS",
+            ]}
+            socialLinks={[
+                {
+                    href: "https://github.com",
+                    icon: "github",
+                    label: "GitHub",
+                },
+                {
+                    href: "https://linkedin.com",
+                    icon: "linkedin",
+                    label: "LinkedIn",
+                },
+                {
+                    href: "https://twitter.com",
+                    icon: "twitter",
+                    label: "Twitter",
+                },
+                { href: "mailto:your@email.com", icon: "mail", label: "Email" },
+                {
+                    href: "https://yourportfolio.com",
+                    icon: "external-link",
+                    label: "Portfolio",
+                },
+            ]}
+            stats={[
+                { title: "Projects Done", value: 432 },
+                { title: "Years of Experience", value: 13, suffix: "+" },
+                { title: "Worldwide Clients", value: 900 },
+            ]}
+            image={{
+                src: "https://img.freepik.com/free-photo/front-view-woman-posing-futuristic-portrait_23-2151178964.jpg?t=st=1740413518~exp=1740417118~hmac=5b2f9bea0e0ec7d633b9062f037048ed90b48389ee32635ac518bbfcc1b4b9dd&w=740",
+                alt: "Profile Photo",
+            }}
+            client:load
+        />
+    </main>
+
+    <style is:global>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</Layout>
